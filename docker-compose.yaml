@@ -1,0 +1,19 @@
+version: "3"
+services:
+ nginx:
+   restart: always
+   build:
+    dockerfile: Dockerfile
+    context: ./nginx
+   ports:
+   - 3050:80
+ client:
+   build:
+     dockerfile: Dockerfile
+     context: ./angular8-springboot-client
+   image: client:tag  
+ api:
+   build:
+    dockerfile: Dockerfile
+    context: ./springboot2-jpa-crud-example
+   image: api:tag  
