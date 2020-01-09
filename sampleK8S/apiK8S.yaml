@@ -1,0 +1,11 @@
+apiVersion: V1
+kind: Pod
+metadata:
+ name: api-pod
+ labels:
+  component: api
+spec:
+ containers:
+  - name: zkrichen/api
+    ports:
+     - containerPort: 8080 
