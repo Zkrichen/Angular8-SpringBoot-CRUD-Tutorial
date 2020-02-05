@@ -1,0 +1,5 @@
+export NAME=api.back.k8s.local
+export KOPS_STATE_STORE=s3://my-kops-env-spring
+kops create cluster --zones us-east-1a,us-east-1b,us-east-1c ${NAME}   
+export AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key)
+
